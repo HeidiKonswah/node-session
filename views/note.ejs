@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link href="/style.css" rel="stylesheet" >
+    </head>
+    <body>
+        <div class="note">
+        <h3>
+            <%= data.note.content %> 
+        </h3>
+        <div>
+            <p>Date: <%= data.note.date %> </li>
+            <% if(data.note.important) { %> 
+                <p>This is an important note!</li>
+            <% } %>
+            </div>
+    </div>
+    </body>
+</html>

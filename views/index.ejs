@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>My notes</title>
+        <link href="/style.css" rel="stylesheet" >
+    </head>
+    <body>
+        <ul>
+            <% data.notes.forEach(note =>{ %>
+                    <li> 
+                        <a href="/notes/<%- note.id %>" >
+                        <%= note.content %> 
+                    </a>
+                    </li>
+                
+            <% }) %>
+        </ul>
+
+        <form action="/notes" method="post">
+            <input type="text" placeholder="write your note" name="content" />
+            <button type="submit">Send</button>
+        </form>
+    </body>
+</html>
